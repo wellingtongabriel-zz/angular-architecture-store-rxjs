@@ -1,0 +1,29 @@
+<nz-table [nzLoading]="carregando" [nzData]="listaPedidos">
+  <thead>
+    <tr>
+      <th>N° Pedido</th>
+      <th>Status</th>
+      <th>Data de Criação</th>
+      <th>Loja</th>
+      <th>Canal</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pedido of listaPedidos">
+      <td>{{ pedido.pedido }}</td>
+      <td>
+        <nz-tag nzColor="{{ pedido.status | statusPedido }}"> 
+          {{ pedido.status | statusPedido }} 
+        </nz-tag>
+      </td>
+      <td>{{ pedido.dataCriacao | date: 'dd/MM/yyyy hh:mm:ss' }}</td>
+      <td>{{ pedido.loja }}</td>
+      <td>{{ pedido.canal }}</td>
+      <td class='acao'>
+        <span><i nz-icon nzType="edit" nzTheme="outline"></i></span>
+        <span><i nz-icon nzType="sync" nzTheme="outline"></i></span>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

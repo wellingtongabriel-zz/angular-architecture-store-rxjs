@@ -1,0 +1,26 @@
+@import '../../../../../assets/styles/cores';
+
+.btn-customizado {
+    background-color: $azul-claro;
+    border-color: $azul-claro;
+}
+
+.menu-formulario {
+
+    display: flex;
+    align-items: center;
+
+    .icone-customizado {
+        padding-right: 15px;
+    }   
+
+    b {
+        font-size: 28px;
+        font-weight: 500;
+        padding-right: 10px;
+    }
+}
+
+.descricao-formulario {
+    padding: 10px 0;
+}

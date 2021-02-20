@@ -1,0 +1,25 @@
+
+<app-metodo-envio-filtro></app-metodo-envio-filtro>
+
+<nz-table [nzLoading]="carregando" [nzData]="listaMetodosEnvios">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Nome e-commerce</th>
+        <th>Nome ERP</th>
+        <th>Cód. transportadora</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let metodoEnvio of listaMetodosEnvios">
+        <td>{{ metodoEnvio.nome }}</td>
+        <td>{{ metodoEnvio.nomeEcommerce }}</td>
+        <td>{{ metodoEnvio.nomeErp }}</td>
+        <td>{{ metodoEnvio.codigoTransportadora }}</td>
+        <td class='acao'>
+          <span><i nz-icon nzType="edit" nzTheme="outline"></i></span>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

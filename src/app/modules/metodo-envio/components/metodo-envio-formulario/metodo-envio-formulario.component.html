@@ -1,0 +1,98 @@
+<div nz-row>
+    <div nz-col nzSpan="24">
+        
+        <span class='menu-formulario'> 
+            <i 
+                routerLink="/metodo-envio"
+                nz-icon 
+                class='icone-customizado' 
+                nzType="arrow-left" 
+                nzTheme="outline"></i> 
+                
+            <b>Cadastrar</b> Novo método de envio
+        </span>
+
+        <p class='descricao-formulario'>Adicione os detalhes do novo método de envio integrando as informações entre a plataforma de e-commerce e o ERP.</p>
+
+        <form nz-form [nzLayout]="'vertical'">
+            
+            <nz-form-item>
+                <nz-form-label [nzSm]="16">
+                    Nome de método de envio
+                </nz-form-label>
+                <nz-form-control [nzSm]="16">
+                  <input 
+                    nz-input
+                    name="nomeEnvio"
+                    placeholder="Exemplo: Magalu Entregas"
+                    [(ngModel)]="metodoEnvio.nomeEnvio" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="16">
+                    Referência do método de envio no e-commerce
+                </nz-form-label>
+                <nz-form-control [nzSm]="16">
+                  <input 
+                    nz-input
+                    name="metodoEcommerce"
+                    placeholder="Exemplo: Magalu Entregas"
+                    [(ngModel)]="metodoEnvio.metodoEcommerce" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="16">
+                    Referência do método de envio no HUB
+                </nz-form-label>
+                <nz-form-control [nzSm]="16">
+                  <input 
+                    nz-input 
+                    name="metodoHub"
+                    placeholder="Exemplo: Magalu Entregas"
+                    [(ngModel)]="metodoEnvio.metodoHub" />
+                </nz-form-control>
+            </nz-form-item>
+            
+            <nz-form-item>
+                <nz-form-label [nzSm]="16">
+                    Selecione a Referência do método de envio no ERP
+                </nz-form-label>
+                <nz-form-control [nzSm]="16">
+                    <nz-select 
+                        [(ngModel)]="metodoEnvio.metodoERP"
+                        [nzPlaceHolder]="'Exemplo: Magalu Entregas'"
+                        name="metodoERP">
+                        <nz-option nzValue="'Exemplo: Magalu Entregas'" nzLabel="Exemplo: Magalu Entregas"></nz-option>
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="16">
+                    Informe o código da transportadora utilizada
+                </nz-form-label>
+                <nz-form-control [nzSm]="16">
+                  <input 
+                    nz-input 
+                    placeholder="Exemplo: F000100"
+                    name="codigoTransportadora"
+                    [(ngModel)]="metodoEnvio.codigoTransportadora" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-control>
+                  <button 
+                    nz-button 
+                    class='btn-customizado' 
+                    nzType="primary"
+                    (click)="salvarFormulario()"> Salvar </button>
+                </nz-form-control>
+            </nz-form-item>
+
+        </form>
+
+    </div>
+</div>

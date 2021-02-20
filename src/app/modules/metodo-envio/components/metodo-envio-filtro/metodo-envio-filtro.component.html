@@ -1,0 +1,35 @@
+<div nz-row>
+    <div nz-col nzSpan="14">
+      <h2> Métodos de envio cadastrados </h2>
+    </div>
+  
+    <div nz-col nzSpan="10">
+      <div nz-row [nzGutter]="[8, 8]">
+        
+        <div nz-col nzSpan="19">
+          <nz-input-group [nzSuffix]="suffixIconSearch">
+            <input 
+              type="text" 
+              nz-input 
+              placeholder="Nome" />
+          </nz-input-group>
+
+          <ng-template #suffixIconSearch>
+            <i nz-icon nzType="search"></i>
+          </ng-template>
+        </div>
+  
+        <div nz-col nzSpan="2">
+            <button 
+              nzType="primary"
+              nz-button 
+              class="btn-customizado"
+              routerLink="/metodo-envio/criacao">
+              <i nz-icon nzType="plus" nzTheme="outline"></i>
+              Novo 
+            </button>
+        </div>
+
+      </div>
+    </div>
+</div>

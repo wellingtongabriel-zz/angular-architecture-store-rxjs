@@ -1,0 +1,5 @@
+<app-pedido-filtro></app-pedido-filtro>
+
+<app-pedido-listagem 
+    [carregando]="(carregando$ | async)!"
+    [listaPedidos]="(pedidos$ | async)!"></app-pedido-listagem>

@@ -1,0 +1,51 @@
+<div nz-row>
+    <div nz-col nzSpan="6">
+      <h2> Pedidos integrados </h2>
+    </div>
+  
+    <div nz-col nzSpan="18">
+      <div nz-row [nzGutter]="[8, 8]">
+        
+        <div nz-col nzSpan="8">
+          <nz-range-picker></nz-range-picker>
+        </div>
+        
+        <div nz-col nzSpan="6">
+          <nz-input-group [nzSuffix]="suffixIconSearch">
+            <input 
+              type="text" 
+              nz-input 
+              placeholder="Número do pedido" />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <i nz-icon nzType="search"></i>
+          </ng-template>
+        </div>
+  
+        <div nz-col nzSpan="7">
+          <nz-select ngModel="lucy" [nzPlaceHolder]="'Status'">
+            <nz-option nzValue="0" nzLabel="Todos"></nz-option>
+            <nz-option nzValue="1" nzLabel="Processando"></nz-option>
+            <nz-option nzValue="2" nzLabel="Erro"></nz-option>
+            <nz-option nzValue="3" nzLabel="Cancelado"></nz-option>
+            <nz-option nzValue="4" nzLabel="Integrado"></nz-option>
+            <nz-option nzValue="5" nzLabel="Completo"></nz-option>
+          </nz-select>
+        </div>
+
+        <div nz-col nzSpan="3">
+          <nz-form-item>
+            <nz-form-control>
+              <button 
+                nz-button 
+                class='btn-customizado' 
+                nzType="primary"> 
+                  <i nz-icon nzType="filter" nzTheme="outline"></i> 
+                  Filtrar
+              </button>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </div>
+</div>

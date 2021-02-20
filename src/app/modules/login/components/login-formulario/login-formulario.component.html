@@ -1,0 +1,78 @@
+<div nz-row class='container-login'>
+    <div nz-col nzSpan="9" class='grid-login'>
+
+        <div nz-row>
+            <div nz-col nzSpan="24" class='logo-nordware'>
+                <img 
+                    src="../../../../assets/logo/nordware.svg" 
+                    alt="logo-nordware" />
+            </div>
+        </div>
+
+        <nz-card style="width: 408px;">
+            
+            <div nz-row>
+                <div nz-col nzSpan="24" class='titulo-formulario'>
+                    <h3> Faça seu login </h3>
+                </div>
+            </div>
+
+            <form nz-form [nzLayout]="'vertical'">
+                <nz-form-item>
+                    <nz-form-label [nzSm]="24">
+                        E-mail
+                    </nz-form-label>
+                    <nz-form-control [nzSm]="24">
+                      <input 
+                        nz-input
+                        name="login"
+                        placeholder="Exemplo: joao@nordware.io" />
+                    </nz-form-control>
+                </nz-form-item>
+    
+                <nz-form-item>
+                    <nz-form-label [nzSm]="24">
+                        Senha
+                    </nz-form-label>
+                    <nz-form-control [nzSm]="24">
+                      <input 
+                        nz-input
+                        name="senha"
+                        placeholder="Insira sua senha" />
+                    </nz-form-control>
+                </nz-form-item>
+    
+                <nz-form-item>
+                    <nz-form-control>
+                      <button 
+                        nz-button 
+                        class='btn-entrar' 
+                        nzType="primary"
+                        (click)="logar()"> Entrar </button>
+                    </nz-form-control>
+                </nz-form-item>
+            </form>
+
+            <div nz-row>
+                <div nz-col nzSpan="24" class='footer-formulario'>
+                    <span class='esqueci-senha'> Esqueci minha senha </span>
+                    <span> ou </span>
+                    <button 
+                        nz-button 
+                        class='btn-faca-login-google' 
+                        nzType="primary">
+                        <img src="../../../../assets/icones/google.svg" /> Faça seu login com o Google 
+                    </button>
+                </div>
+            </div>
+
+        </nz-card>
+
+        <div nz-row>
+            <div nz-col nzSpan="24" class='precisa-ajuda'>
+                <span> Precisa de ajuda? </span>
+            </div>
+        </div>
+
+    </div>
+  </div>

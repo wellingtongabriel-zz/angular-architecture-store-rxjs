@@ -1,0 +1,85 @@
+@import '../../../../../assets/styles/cores';
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .grid-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-entrar {
+        width: 100%;
+        padding: 8px 16px;
+        height: 40px;
+        background: $verde-claro;
+        border: 1px solid $verde-claro;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
+        border-radius: 4px;
+    }
+    
+    .footer-formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        > .esqueci-senha {
+            color: $verde-claro;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+    
+        span {
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+    
+        > .btn-faca-login-google {
+            width: 100%;
+            height: 40px;
+            background: #FFFFFF;
+            border: 1px solid #E2E2E2;
+            box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
+            border-radius: 4px;
+            color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+
+            img {
+                padding: 5px;
+            }
+        }
+    }
+    
+    .titulo-formulario {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .precisa-ajuda {
+        color: $verde-claro;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        cursor: pointer;
+        padding: 30px 0;
+    }
+    
+    .logo-nordware {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 30px 0;
+    }
+    
+}
